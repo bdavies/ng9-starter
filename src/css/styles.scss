@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
+@import "variables.scss";
+
+//ngx-toastr
+@import "~ngx-toastr/toastr";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  height: 100%;
+}
+
+.nomargin {
+  margin: 0 !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.error {
+  display: block;
+  margin-top: 20px;
+  background: var(--error-bg);
+  padding: 6px;
+  border-radius: 4px;
+  color: var(--error-text);
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.editable-heading {
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.list-header {
+  padding: 12px 24px;
+}
+
+.list-outer {
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.list-item {
+  padding: 24px;
+  border-bottom: 1px solid var(--lighter-grey);
+
+  &:hover {
+    background: var(--lighter-grey);
+    cursor: pointer;
+  }
+}

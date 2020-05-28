@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title>{{ APP_TITLE }}</mat-card-title>
+  <mat-card-content>
+    <app-login-form
+      [errorMessage]="error"
+      [validationErrors]="validationErrors"
+      [disabled]="loading"
+      (submitted)="loginFormSubmitted($event)"
+    ></app-login-form>
+  </mat-card-content>
+</mat-card>

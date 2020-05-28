@@ -1,0 +1,9 @@
+<nav id="nav-main" fxFlex>
+  <ul fxLayout fxLayoutGap="12px">
+    <li *ngFor="let item of navItems">
+      <a [routerLink]="[item.path]" routerLinkActive="active-link">{{
+        item.label
+      }}</a>
+    </li>
+  </ul>
+</nav>

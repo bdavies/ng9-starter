@@ -1,0 +1,57 @@
+<form @enter [formGroup]="form" (ngSubmit)="formSubmitted()">
+  <div fxLayout="column" fxLayoutGap="16px">
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        placeholder="Email address"
+        formControlName="username"
+      />
+      <mat-error
+        *ngIf="
+          form.get('username').hasError('email') &&
+          !form.get('username').hasError('required')
+        "
+      >
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="form.get('username').hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="form.get('username').hasError('api')">
+        {{ form.get("username").getError("api") }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        type="password"
+        matInput
+        placeholder="Password"
+        formControlName="password"
+      />
+      <mat-error *ngIf="form.get('password').hasError('required')">
+        Password is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="form.get('password').hasError('api')">
+        {{ form.get("password").getError("api") }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div fxLayout fxLayoutAlign="end center">
+    <button
+      id="login-btn"
+      [disabled]="disabled"
+      type="submit"
+      mat-flat-button
+      color="primary"
+    >
+      Login
+    </button>
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+</form>

@@ -1,0 +1,9 @@
+<button
+  class="pointer"
+  [class.hover-bg]="hoverBackground"
+  fxLayout
+  fxLayoutAlign="center center"
+  (click)="iconClicked($event)"
+>
+  <mat-icon [color]="color">{{ icon }}</mat-icon>
+</button>

@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <div fxFlexFill fxLayout fxLayoutAlign="space-between center">
+    <a [routerLink]="['/dashboard']"
+      ><span>{{ APP_TITLE }}</span></a
+    >
+
+    <div fxFlex>
+      <app-main-nav></app-main-nav>
+    </div>
+
+    <div
+      [matMenuTriggerFor]="profileMenu"
+      fxLayout
+      fxLayoutAlign="start center"
+      fxLayoutGap="12px"
+      class="pointer"
+    >
+      <span class="header-user-details" *ngIf="user$ | async as user">
+        {{ user.first_name }} {{ user.last_name }}
+      </span>
+
+      <app-interactive-icon
+        color="white"
+        icon="account_circle"
+      ></app-interactive-icon>
+    </div>
+
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item (click)="logoutClicked()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

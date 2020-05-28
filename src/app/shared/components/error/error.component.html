@@ -1,0 +1,10 @@
+<div
+  class="error"
+  fxLayout="column"
+  fxLayoutAlign="start center"
+  fxLayoutGap="12px"
+>
+  <mat-icon>error</mat-icon>
+  <span>There was an error loading {{ item }}</span>
+  <span *ngIf="error">{{ error }}</span>
+</div>

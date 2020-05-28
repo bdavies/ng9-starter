@@ -1,0 +1,12 @@
+// Globally available, even in Encapsulated stylesheets
+:root {
+  --login-bg: var(--light-grey);
+  --error-bg: var(--light-red);
+  --error-text: var(--red);
+
+  // our palette
+  --light-grey: #eee;
+  --lighter-grey: #f3f3f3;
+  --light-red: #ffccbb;
+  --red: #ff0000;
+}

@@ -1,0 +1,22 @@
+button {
+  background: none;
+  border: none;
+}
+
+.mat-white {
+  color: white;
+}
+
+.mat-white svg {
+  fill: white;
+}
+
+.hover-bg {
+  height: 50px;
+  width: 50px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+}
